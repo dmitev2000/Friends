@@ -20,10 +20,15 @@
             <td>@friend.Ime</td>
             <td>@friend.MestoZiveenje</td>
             <td class="text-center">
-                @Html.ActionLink("Edit", "EditFriend", new { id = friend.Id }, new { @class = "btn btn-primary text-center" })
-                @Html.ActionLink("Delete", "DeleteFriend", new { id = friend.Id }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Edit", "EditFriend", new { id = friend.Id }, new { @class = "btn btn-size btn-primary text-center" })
+                @Html.ActionLink("Delete", "DeleteFriend", new { id = friend.Id }, new { @class = "btn btn-size btn-danger" })
             </td>
         </tr>
     }
 </table>
 
+<style>
+    .btn-size {
+        width: 100px;
+    }
+</style>
