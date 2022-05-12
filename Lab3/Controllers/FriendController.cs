@@ -40,7 +40,7 @@ namespace Lab3.Controllers
         }
 
         [HttpGet]
-        public ActionResult EditFriend(byte Id)
+        public ActionResult EditFriend(int Id)
         {
             FriendModel friend = friends.Single(f => f.Id == Id);
             return View(friend);
@@ -63,7 +63,7 @@ namespace Lab3.Controllers
             return View("Index", friends);
         }
 
-        public ActionResult DeleteFriend(byte Id)
+        public ActionResult DeleteFriend(int Id)
         {
             FriendModel toRemove = friends.Single(friend => friend.Id == Id);
             if (toRemove != null)

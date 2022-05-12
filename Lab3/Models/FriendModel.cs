@@ -11,7 +11,7 @@ namespace Lab3.Models
         [Required]
         [Range(0, 200)]
         [Display(Name = "Friend ID")]
-        public byte Id { get; set; }
+        public int Id { get; set; }
         [Required]
         [Display(Name = "Friend Name")]
         public string Ime { get; set; }
