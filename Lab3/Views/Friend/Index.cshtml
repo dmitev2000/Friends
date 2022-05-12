@@ -1,0 +1,29 @@
+﻿@using Lab3.Models
+@model IEnumerable<Lab3.Models.FriendModel>
+
+@{
+    ViewBag.Title = "Friends";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Friend ID.</th>
+        <th>Friend Name</th>
+        <th>Place</th>
+    </tr>
+    @foreach (FriendModel friend in Model)
+    {
+        <tr>
+            <td>@friend.Id</td>
+            <td>@friend.Ime</td>
+            <td>@friend.MestoZiveenje</td>
+            <td class="text-center">
+                @Html.ActionLink("Edit", "EditFriend", new { id = friend.Id }, new { @class = "btn btn-primary text-center" })
+                @Html.ActionLink("Delete", "DeleteFriend", new { id = friend.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+
